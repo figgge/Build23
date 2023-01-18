@@ -17,6 +17,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 >>>>>>> 3070462cf57925921cb3c1691a6df75a5939d962
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
 
 //@SuppressWarnings({"unchecked"})
 @ExtendWith(MockitoExtension.class)
@@ -38,7 +39,7 @@ class TestabilityTest {
 
         assertTrue(logger.logIsCalled);
 
-        Mockito.verify(mailSender).sendMail(eq("Some-invalid-email-address.com"),anyString());
+        Mockito.verify(mailSender, times(1)).sendMail(eq("Some-invalid-email-address.com"),anyString());
 
     }
 }
