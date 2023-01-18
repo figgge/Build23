@@ -10,7 +10,12 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+<<<<<<< HEAD
 import static org.mockito.ArgumentMatchers.*;
+=======
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+>>>>>>> 3070462cf57925921cb3c1691a6df75a5939d962
 import static org.mockito.Mockito.mock;
 
 //@SuppressWarnings({"unchecked"})
@@ -34,5 +39,6 @@ class TestabilityTest {
         assertTrue(logger.logIsCalled);
 
         Mockito.verify(mailSender).sendMail(eq("Some-invalid-email-address.com"),anyString());
+
     }
 }
